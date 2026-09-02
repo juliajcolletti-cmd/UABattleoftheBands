@@ -20,7 +20,7 @@
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
-  body { background: var(--white); color: var(--gray); font-family: 'Inter', sans-serif; overflow-x: hidden; }
+  body { background: var(--white); color: var(--gray); font-family: 'Georgia', serif; overflow-x: hidden; }
 
   /* NAV */
   nav { position: sticky; top: 0; z-index: 200; background: var(--crimson); display: flex; align-items: stretch; border-bottom: 3px solid var(--crimson-d); }
@@ -28,7 +28,7 @@
   .nav-brand span { color: var(--gold); }
   .nav-tabs { display: flex; list-style: none; overflow-x: auto; scrollbar-width: none; }
   .nav-tabs::-webkit-scrollbar { display: none; }
-  .nav-tabs li a { display: flex; align-items: center; height: 100%; padding: 18px 20px; font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.7); text-decoration: none; border-bottom: 3px solid transparent; margin-bottom: -3px; transition: all 0.2s; white-space: nowrap; }
+  .nav-tabs li a { display: flex; align-items: center; height: 100%; padding: 18px 20px; font-size: 12px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.7); text-decoration: none; border-bottom: 3px solid transparent; margin-bottom: -3px; transition: all 0.2s; white-space: nowrap; }
   .nav-tabs li a:hover, .nav-tabs li a.active { color: var(--white); border-bottom-color: var(--gold); background: rgba(0,0,0,0.15); }
 
   .page { display: none; }
@@ -45,7 +45,7 @@
   .hero-meta { font-size: 15px; font-weight: 400; color: var(--gray); line-height: 1; margin-bottom: 40px; display: flex; flex-direction: column; gap: 14px; }
   .hero-meta .meta-date { font-family: 'Oswald', sans-serif; font-size: 22px; font-weight: 600; color: var(--crimson); letter-spacing: 0.04em; }
   .hero-meta .meta-venue { font-size: 14px; font-weight: 500; color: var(--gray); letter-spacing: 0.02em; }
-  .hero-meta .meta-cause { font-size: 14px; font-weight: 700; color: var(--crimson); letter-spacing: 0.01em; }
+  .hero-meta .meta-cause { font-size: 15px; font-weight: 700; color: var(--crimson); letter-spacing: 0.01em; }
   .hero-meta strong { color: var(--gray); font-weight: 600; }
   .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
   .hero-visual { background: var(--crimson-d); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
@@ -69,14 +69,14 @@
   /* TICKER */
   .ticker { background: var(--crimson); color: var(--white); padding: 10px 0; overflow: hidden; white-space: nowrap; }
   .ticker-inner { display: inline-block; animation: ticker 32s linear infinite; }
-  .ticker-inner span { font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; margin-right: 72px; color: rgba(255,255,255,0.8); }
+  .ticker-inner span { font-size: 12px; letter-spacing: 0.25em; text-transform: uppercase; margin-right: 72px; color: rgba(255,255,255,0.8); }
   .ticker-inner span b { color: var(--gold); }
   @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
   /* LAYOUT */
   .wrap { max-width: 1200px; margin: 0 auto; padding: 80px 40px; }
   @media (max-width: 600px) { .wrap { padding: 60px 20px; } }
-  .label { font-size: 11px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--crimson); margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+  .label { font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--crimson); margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
   .label::after { content: ''; flex: 1; height: 1px; background: currentColor; opacity: 0.3; max-width: 60px; }
   .section-title { font-family: 'Oswald', sans-serif; font-size: clamp(36px,5vw,60px); font-weight: 700; text-transform: uppercase; line-height: 1.05; margin-bottom: 48px; }
 
@@ -104,7 +104,7 @@
   .board-row.r1 .rank { color: var(--gold); font-size: 26px; }
   .board-row.r2 .rank { color: #888; }
   .board-row.r3 .rank { color: #a0714a; }
-  .org-name { font-size: 13px; font-weight: 500; }
+  .org-name { font-size: 15px; font-weight: 500; }
   .org-type { font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--light); margin-top: 2px; }
   .bar-track { height: 5px; background: rgba(0,0,0,0.08); overflow: hidden; }
   .bar-fill { height: 100%; background: var(--crimson); transition: width 1.2s cubic-bezier(0.25,1,0.5,1); }
@@ -125,7 +125,7 @@
   .pkg { background: var(--white); padding: 36px 28px; display: flex; flex-direction: column; transition: transform 0.2s; position: relative; }
   .pkg:hover { transform: translateY(-4px); z-index: 2; box-shadow: 0 12px 40px rgba(0,0,0,0.12); }
   .pkg.featured { background: var(--crimson); color: var(--white); }
-  .pkg-tier { font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; opacity: 0.5; margin-bottom: 14px; }
+  .pkg-tier { font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; opacity: 0.5; margin-bottom: 14px; }
   .pkg-name { font-family: 'Oswald', sans-serif; font-size: 32px; font-weight: 700; text-transform: uppercase; line-height: 1; margin-bottom: 4px; }
   .pkg-price { font-size: 13px; color: var(--crimson); margin-bottom: 20px; font-weight: 700; }
   .pkg.featured .pkg-price { color: var(--gold); }
@@ -134,7 +134,7 @@
   .pkg-bands-lbl { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.45; margin-bottom: 24px; margin-top: 2px; }
   .pkg-fmv { font-size: 10px; opacity: 0.4; margin-bottom: 20px; letter-spacing: 0.05em; }
   .pkg ul { list-style: none; display: flex; flex-direction: column; gap: 9px; flex: 1; }
-  .pkg li { font-size: 10px; line-height: 1.5; opacity: 0.65; padding-left: 14px; position: relative; }
+  .pkg li { font-size: 13px; line-height: 1.5; opacity: 0.65; padding-left: 14px; position: relative; }
   .pkg li::before { content: '—'; position: absolute; left: 0; opacity: 0.5; }
   .pkg-btn { margin-top: 28px; }
   .limited { display: inline-block; background: var(--gold); color: var(--gray); font-size: 8px; letter-spacing: 0.15em; text-transform: uppercase; padding: 2px 8px; margin-left: 8px; font-family: 'Inter', sans-serif; vertical-align: middle; }
@@ -211,7 +211,7 @@
   .schol-stat-lbl { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--light); margin-top: 6px; line-height: 1.5; }
   .schol-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
   @media (max-width: 700px) { .schol-grid { grid-template-columns: 1fr; } .schol-stats { grid-template-columns: 1fr; } }
-  .prose { font-size: 14px; line-height: 1.9; color: var(--muted); }
+  .prose { font-size: 15px; line-height: 1.95; color: var(--muted); }
   .prose p + p { margin-top: 16px; }
   .callout { background: rgba(158,27,50,0.06); border-left: 3px solid var(--crimson); padding: 20px 24px; margin: 24px 0; font-size: 12px; line-height: 1.8; color: var(--gray); font-style: italic; }
   .need-list { list-style: none; margin: 16px 0 24px; display: flex; flex-direction: column; gap: 10px; }
@@ -233,8 +233,8 @@
   .prize-item.p1 .prize-medal { color: var(--gold); }
   .prize-item.p2 .prize-medal { color: #888; }
   .prize-item.p3 .prize-medal { color: #a0714a; }
-  .prize-name { font-size: 13px; font-weight: 500; margin-bottom: 4px; }
-  .prize-desc { font-size: 10px; color: var(--light); letter-spacing: 0.05em; line-height: 1.6; }
+  .prize-name { font-size: 15px; font-weight: 500; margin-bottom: 4px; }
+  .prize-desc { font-size: 14px; color: var(--light); letter-spacing: 0.05em; line-height: 1.6; }
 
   /* FOOTER */
   footer { background: var(--off); color: rgba(0,0,0,0.35); padding: 40px; text-align: center; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; line-height: 2.2; }
@@ -291,7 +291,7 @@
   </div>
 
   <div class="raised-bar">
-    <div class="raised-label">Total Raised — 2026</div>
+    <div class="raised-label">Total Raised · 2026</div>
     <div class="raised-num">$0</div>
     <div class="raised-goal">Goal: $25,000</div>
     <div class="prog-outer"><div class="prog-fill" style="width:0%"></div></div>
@@ -336,7 +336,7 @@
         <div style="margin-top:32px; background:var(--off); padding:28px 32px;">
           <div style="font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:var(--crimson); margin-bottom:10px">This Year's Prize</div>
           <div style="font-family:'Oswald',sans-serif; font-size:20px; font-weight:700; text-transform:uppercase; margin-bottom:8px">🎸 Paid Gig at Gallettes</div>
-          <div style="font-size:11px; color:var(--muted); line-height:1.8">The winning band receives a paid performance on a Friday or Saturday night at Gallettes, facilitated by SGA VP for External Affairs Lily Leitner. Tentative — subject to final confirmation.</div>
+          <div style="font-size:11px; color:var(--muted); line-height:1.8">The winning band receives a paid performance on a Friday or Saturday night at Gallettes.</div>
         </div>
 
         <div style="margin-top:16px; background:var(--off); padding:24px 32px;">
@@ -352,7 +352,7 @@
           <div style="font-family:'Oswald',sans-serif; font-size:40px; font-weight:700; text-transform:uppercase; line-height:1; margin-bottom:20px">Apply to<br>Compete</div>
           <p style="font-size:11px; line-height:1.9; opacity:0.75; margin-bottom:36px">Submit the official 2026 interest form to be considered for the lineup. Finalists will be contacted directly by the organizing committee.</p>
           <a href="https://universityofalabama.az1.qualtrics.com/jfe/form/SV_brXBkCq7AKdwoIe" target="_blank" class="btn btn-gold" style="display:block; text-align:center; font-size:12px">Submit Interest Form →</a>
-          <div style="margin-top:16px; font-size:9px; opacity:0.4; letter-spacing:0.1em; text-align:center; text-transform:uppercase">Opens in a new tab</div>
+          
         </div>
       </div>
     </div>
@@ -365,7 +365,7 @@
     <div class="schol-hero-inner">
       <div class="label">Where Your Money Goes</div>
       <h2>The <span class="gold">Joe Espy</span><br>SGA Scholarship</h2>
-      <p>Every dollar raised at Battle of the Bands goes directly toward supporting University of Alabama students navigating unexpected financial hardship. This event welcomes the entire UA community and greater Tuscaloosa area — students, student organizations, and local businesses — to come together for a cause that makes a real difference.</p>
+      <p>Every dollar raised at Battle of the Bands goes directly toward supporting University of Alabama students navigating unexpected financial hardship. This event welcomes the entire UA community and greater Tuscaloosa area — students, student organizations, and local businesses, to come together for a cause that makes a real difference.</p>
     </div>
   </div>
 
@@ -375,47 +375,61 @@
         <div class="label">About the Fund</div>
         <div class="section-title" style="margin-bottom:24px">What Is It?</div>
         <div class="prose">
-          <p>The Joe Espy SGA Scholarship Fund is a need-based emergency scholarship administered by the University of Alabama's Student Government Association. It exists to provide immediate financial relief to UA students facing unexpected hardship — the kind of sudden crisis that can derail an entire semester or worse.</p>
-          <p>Unlike traditional scholarships that reward merit months in advance, the Espy Fund is <em>utility-based</em> — meaning funds help students cover real-life needs like rent, car payments, utilities, and other essentials outside of academic obligations. Students in crisis can apply and receive assistance quickly, because some situations simply can't wait.</p>
-          <div class="callout">"Students in need of essential financial assistance due to a temporary hardship or unexpected emergency are encouraged to apply for a need-based scholarship award from the Joe Espy SGA Scholarship Fund." — UA Student Care & Well-Being</div>
-          <p>The fund is available to both full-time and part-time UA students throughout the academic term, with applications opening after classes begin each semester.</p>
+          <p>The Joe Espy SGA Scholarship Fund is a need-based emergency scholarship administered by the University of Alabama's Student Government Association. It was created to provide timely financial relief to students facing sudden, unexpected hardship that often arrives without warning.</p>
+          <p>Unlike traditional merit-based scholarships, the Espy Fund is utility-based. That means it helps students cover real, immediate needs: rent, car repairs, utility bills, and other essentials that fall outside of standard financial aid. Applications are reviewed individually, and assistance is provided as quickly as possible.</p>
+          <p>The fund is open to all enrolled UA students — full-time and part-time, throughout the academic term.</p>
         </div>
       </div>
       <div>
         <div class="label">Who It Helps</div>
         <div class="section-title" style="margin-bottom:24px">Who Can Apply?</div>
-        <div class="prose"><p>Any enrolled UA student facing a documented, sudden financial emergency is eligible. The kinds of hardships covered include:</p></div>
-        <ul class="need-list">
-          <li>Sudden loss of income or family financial support</li>
-          <li>Unexpected medical or mental health expenses</li>
-          <li>Housing or food insecurity caused by an unforeseen event</li>
-          <li>Natural disasters affecting a student's primary residence</li>
-          <li>Death in the immediate family accompanied by financial hardship</li>
-          <li>Any other documented crisis placing a student in temporary financial distress</li>
-        </ul>
-        <div class="prose"><p>Each application is reviewed individually by an SGA committee — the goal is to make sure students get the actual help they need, quickly.</p></div>
-
-        <div style="margin-top:24px; background:var(--crimson); color:var(--white); padding:28px 32px; position:relative;">
-          <div style="font-size:36px; color:var(--gold); font-family:'Playfair Display',serif; line-height:1; margin-bottom:8px">"</div>
-          <div style="font-size:12px; line-height:1.9; font-style:italic; opacity:0.9; margin-bottom:12px">I didn't know where to turn. The Joe Espy Fund gave me the breathing room I needed to stay in school and finish my semester. I'm so grateful it exists.</div>
-          <div style="font-size:9px; letter-spacing:0.2em; text-transform:uppercase; opacity:0.5">— Anonymous UA Student Recipient</div>
+        <div class="prose">
+          <p>Any enrolled UA student facing a documented financial emergency is eligible to apply. Qualifying circumstances include sudden loss of household income, unexpected medical costs, housing or food insecurity, natural disasters, the death of an immediate family member, or any other unforeseen crisis that places a student in financial distress.</p>
+          <p>Every application is reviewed on a case-by-case basis by the SGA committee, with the goal of connecting students with the support they need without delay.</p>
         </div>
 
-        <div style="margin-top:24px">
+        <div style="margin-top:28px;">
           <a href="https://cm.maxient.com/reportingform.php?UnivofAlabama&layout_id=5" target="_blank" class="btn btn-crimson" style="display:inline-block">Apply for the Scholarship →</a>
-          <div style="font-size:9px; color:var(--light); margin-top:10px; letter-spacing:0.1em">Opens the official UA scholarship application form</div>
+          <div style="font-size:11px; color:var(--light); margin-top:10px;">Opens the official UA scholarship application form</div>
         </div>
       </div>
     </div>
 
-    <div style="margin-top:56px; padding-top:56px; border-top:1px solid rgba(0,0,0,0.08)">
+    <!-- STUDENT STORIES -->
+    <div style="margin-top:64px; padding-top:56px; border-top:1px solid rgba(0,0,0,0.08)">
+      <div class="label">Real Stories</div>
+      <div class="section-title">Students Helped<br>By This Fund</div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:24px; margin-bottom:56px;">
+
+        <div style="background:var(--crimson); color:var(--white); padding:36px 32px;">
+          <div style="font-size:40px; color:var(--gold); font-family:'Playfair Display',serif; line-height:1; margin-bottom:12px">"</div>
+          <p style="font-size:13px; line-height:1.9; opacity:0.9; margin-bottom:20px; font-style:italic;">A first-generation student maintained a 3.9 GPA while commuting an hour each way and working 30 hours a week. When their car broke down, they had to purchase another vehicle entirely on their own — adding a heavy monthly payment to an already tight budget. The assistance provided helped this student cross the graduation stage.</p>
+          <div style="font-size:10px; letter-spacing:0.15em; text-transform:uppercase; opacity:0.55;">— Anonymous UA Student Recipient</div>
+        </div>
+
+        <div style="background:var(--off); padding:36px 32px;">
+          <div style="font-size:40px; color:var(--crimson); font-family:'Playfair Display',serif; line-height:1; margin-bottom:12px">"</div>
+          <p style="font-size:13px; line-height:1.9; color:var(--muted); margin-bottom:20px; font-style:italic;">When a father unexpectedly suffered a severe stroke, a student's world shifted from classroom notes to caregiving schedules. As the family worked tirelessly to cover tuition and living costs, the days grew physically and emotionally exhausting. Financial assistance was essential for this student to return to UA and continue their education.</p>
+          <div style="font-size:10px; letter-spacing:0.15em; text-transform:uppercase; color:var(--light);">— Anonymous UA Student Recipient</div>
+        </div>
+
+        <div style="background:var(--gray); color:var(--white); padding:36px 32px;">
+          <div style="font-size:40px; color:var(--gold); font-family:'Playfair Display',serif; line-height:1; margin-bottom:12px">"</div>
+          <p style="font-size:13px; line-height:1.9; opacity:0.85; margin-bottom:20px; font-style:italic;">A second-semester student was thriving academically when their father, the family's primary provider, unexpectedly lost his job. With the family's income suddenly paused, a remaining balance on the student's spring tuition threatened their enrollment. Despite the financial storm, this student stayed committed to their studies. The assistance provided allowed for a successful completion of the semester.</p>
+          <div style="font-size:10px; letter-spacing:0.15em; text-transform:uppercase; opacity:0.45;">— Anonymous UA Student Recipient</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div style="padding-top:0; padding-bottom:56px;">
       <div class="label">Why It Matters</div>
       <div class="section-title">Your Impact</div>
       <div style="max-width:680px">
         <div class="prose">
-          <p>The college experience is full of opportunity — but for many students, a single unforeseen circumstance can create real financial strain. A medical expense, a loss of income, or a family hardship can quickly become a barrier to staying enrolled and on track.</p>
-          <p>The Joe Espy Fund exists to bridge that gap. When you sponsor Battle of the Bands, you are doing more than securing a sponsorship package — you are directly investing in the academic futures of fellow Crimson Tide students and helping ensure that financial hardship does not determine who gets to finish their degree.</p>
-          <p>Whether you represent a student organization, a local business, or simply a member of the Tuscaloosa community who believes in this mission — your contribution matters and your support is welcomed.</p>
+          <p>Behind every dollar raised at Battle of the Bands is a student who simply needed a bridge. Not a handout. A bridge. Something to carry them from an unexpected moment back to the path they were already on.</p>
+          <p>When you sponsor this event, you are directly investing in the academic futures of University of Alabama students and affirming that financial hardship alone should never determine who gets to finish their degree.</p>
+          <p>Your support, at any level, is what makes that possible.</p>
         </div>
         <div style="margin-top:32px">
           <a href="javascript:void(0)" class="btn btn-crimson" onclick="return showPage('donate')">Support the Fund →</a>
@@ -431,7 +445,7 @@
     <div class="label">Sponsorship Opportunities</div>
     <div class="section-title">Pick Your Package</div>
     <div class="prose" style="max-width:640px; margin-bottom:40px">
-      <p>Sponsoring Battle of the Bands is an opportunity for your organization to engage members in a high-energy campus event, support a meaningful philanthropic initiative, and gain visibility across campus — all while directly funding the Joe Espy SGA Scholarship.</p>
+      <p>Sponsoring Battle of the Bands is an opportunity for your organization to engage members in a high-energy campus event, support a meaningful philanthropic initiative, and gain visibility across campus — while directly funding the Joe Espy SGA Scholarship.</p>
     </div>
   </div>
 
@@ -514,8 +528,8 @@
           <div class="prize-medal">1st</div>
           <div>
             <div class="prize-name">Champion Band</div>
-            <div class="prize-desc">Paid gig at Gallettes on a Friday or Saturday night, facilitated by SGA VP for External Affairs Lily Leitner.</div>
-            <div class="tbd-tag" style="margin-top:6px">Tentative — Confirmed ✓</div>
+            <div class="prize-desc">Paid gig at Gallettes on a Friday or Saturday night</div>
+            
           </div>
         </div>
         <div class="prize-item p2">
@@ -536,8 +550,8 @@
           <div class="prize-medal">1st</div>
           <div>
             <div class="prize-name">Top Fundraising Organization</div>
-            <div class="prize-desc">Free date party at The Booth, facilitated by SGA VP for External Affairs Lily Leitner.</div>
-            <div class="tbd-tag" style="margin-top:6px">Tentative — Confirmed ✓</div>
+            <div class="prize-desc">Free date party at The Booth</div>
+            
           </div>
         </div>
         <div class="prize-item p2">
@@ -547,9 +561,6 @@
         <div class="prize-item p3">
           <div class="prize-medal">3rd</div>
           <div><div class="prize-name">Third-Highest Donor</div><div class="prize-desc">Recognition + prize TBD.</div><div class="tbd-tag" style="margin-top:6px">TBD</div></div>
-        </div>
-        <div style="margin-top:24px; background:rgba(158,27,50,0.06); border-left:3px solid var(--crimson); padding:16px 20px; font-size:11px; line-height:1.8">
-          <strong>How it works:</strong> Total donations = your leaderboard rank. The higher your organization climbs, the better your prize. Final prize structure will be posted here once confirmed.
         </div>
       </div>
     </div>
@@ -566,31 +577,24 @@
   <div style="padding:0 40px 80px; max-width:1240px; margin:0 auto">
     <div class="donate-grid">
       <div class="donate-left">
-        <div class="label">How to Participate</div>
-        <div class="donate-title">How to<br>Donate</div>
-        <p class="donate-body">Select a sponsorship package, then submit your payment using one of the options below. Once received, we will confirm your sponsorship and coordinate wristband distribution.</p>
-
-        <div class="payment-box">
-          <strong>Pay by Check</strong>
-          Make checks payable to:<br>
-          <strong>The University of Alabama</strong><br>
-          Memo line: <strong>Battle of the Bands – Joe Espy Scholarship</strong>
-        </div>
-
-        <p style="font-size:10px; opacity:0.6; line-height:1.8; margin-bottom:24px">Questions about payment, wristband pickup, or sponsorship confirmation? Contact us directly.</p>
+        <div class="label">How to Donate</div>
+        <div class="donate-title">Support<br>the Fund</div>
+        <p class="donate-body">All donations are processed securely through GiveButter, our official fundraising platform. Every dollar goes directly to the Joe Espy SGA Scholarship Fund at the University of Alabama.</p>
+        <p class="donate-body">After donating, your organization will appear on the live leaderboard. Select a sponsorship package to receive wristbands and additional recognition benefits.</p>
         <a href="javascript:void(0)" class="btn btn-gold" onclick="return showPage('sponsors')">View Packages →</a>
       </div>
       <div class="donate-right">
-        <div class="contact-box">
-          <div class="contact-name">Lily Leitner</div>
-          <div class="contact-title">Vice President for External Affairs<br>Student Government Association · University of Alabama</div>
-          <div class="contact-detail">
-            <a href="mailto:lhleitner@crimson.ua.edu">lhleitner@crimson.ua.edu</a><br>
-            <a href="tel:2058862872">(205) 886-2872</a>
+        <div style="width:100%; background:var(--white); border:2px dashed rgba(158,27,50,0.2); padding:48px 32px; text-align:center;">
+          <div style="font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:var(--light); margin-bottom:16px">Donation Portal</div>
+          <div style="font-family:'Oswald',sans-serif; font-size:32px; font-weight:700; color:var(--crimson); margin-bottom:12px;">GiveButter</div>
+          <p style="font-size:12px; color:var(--muted); line-height:1.8; margin-bottom:28px;">Our donation link will be live here shortly.</p>
+          <div style="background:var(--off); padding:20px 24px; text-align:left; margin-bottom:24px;">
+            <div style="font-size:11px; font-weight:600; color:var(--gray); margin-bottom:4px;">Lily Leitner</div>
+            <div style="font-size:11px; color:var(--muted); line-height:1.9;">VP for External Affairs, SGA<br>
+            <a href="mailto:lhleitner@crimson.ua.edu" style="color:var(--crimson); text-decoration:none;">lhleitner@crimson.ua.edu</a><br>
+            <a href="tel:2058862872" style="color:var(--crimson); text-decoration:none;">(205) 886-2872</a></div>
           </div>
-        </div>
-        <div style="width:100%; font-size:10px; color:var(--light); line-height:1.9; text-align:left">
-          After submitting payment, coordinate wristband distribution with your organization ahead of the event date. Sponsorship confirmation will be sent via email.
+          <div style="font-size:10px; color:var(--light); letter-spacing:0.1em; text-transform:uppercase;">Coming Soon · Powered by GiveButter</div>
         </div>
       </div>
     </div>
@@ -630,7 +634,7 @@ function renderLeaderboard(id) {
   el.innerHTML = '';
   const allZero = sponsors.every(s => s.amount === 0);
   if (allZero) {
-    el.innerHTML = `<div style="text-align:center; padding:48px 20px; border: 2px dashed rgba(158,27,50,0.2);"><div style="font-family:'Oswald',sans-serif; font-size:32px; color:var(--crimson); margin-bottom:8px;">Be the First!</div><div style="font-size:11px; color:var(--light); letter-spacing:0.1em; line-height:1.8;">No donations yet — your organization could be at the top.<br>Sponsor today and claim the #1 spot.</div></div>`;
+    el.innerHTML = `<div style="text-align:center; padding:48px 20px; border: 2px dashed rgba(158,27,50,0.2);"><div style="font-family:'Oswald',sans-serif; font-size:32px; color:var(--crimson); margin-bottom:8px;">Be the First!</div><div style="font-size:11px; color:var(--light); letter-spacing:0.1em; line-height:1.8;">No donations yet. Your organization could be at the top.<br>Sponsor today and claim the #1 spot.</div></div>`;
     return;
   }
   const maxAmt = Math.max(...sponsors.map(s => s.amount), 1);
