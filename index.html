@@ -127,7 +127,7 @@
   .pkg.featured { background: var(--crimson); color: var(--white); }
   .pkg-tier { font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; opacity: 0.5; margin-bottom: 14px; }
   .pkg-name { font-family: 'Oswald', sans-serif; font-size: 32px; font-weight: 700; text-transform: uppercase; line-height: 1; margin-bottom: 4px; }
-  .pkg-price { font-size: 13px; color: var(--crimson); margin-bottom: 20px; font-weight: 700; }
+  .pkg-price { font-family: 'Oswald', sans-serif; font-size: 28px; color: var(--crimson); margin-bottom: 20px; font-weight: 700; letter-spacing: 0.02em; }
   .pkg.featured .pkg-price { color: var(--gold); }
   .pkg-bands-num { font-family: 'Oswald', sans-serif; font-size: 52px; font-weight: 700; line-height: 1; color: var(--crimson); }
   .pkg.featured .pkg-bands-num { color: var(--gold); }
@@ -148,7 +148,7 @@
   .donate-left .label { color: rgba(255,255,255,0.5); }
   .donate-left .label::after { background: rgba(255,255,255,0.3); }
   .donate-title { font-family: 'Oswald', sans-serif; font-size: 52px; font-weight: 700; text-transform: uppercase; line-height: 1; margin-bottom: 20px; }
-  .donate-body { font-size: 11px; line-height: 1.9; opacity: 0.7; margin-bottom: 28px; }
+  .donate-body { font-size: 15px; line-height: 1.9; opacity: 0.7; margin-bottom: 28px; }
   .payment-box { background: rgba(0,0,0,0.15); padding: 20px 24px; margin-bottom: 28px; font-size: 11px; line-height: 1.9; }
   .payment-box strong { color: var(--gold); display: block; font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 6px; }
   .contact-box { background: var(--white); padding: 28px 32px; width: 100%; margin-bottom: 20px; text-align: left; }
@@ -521,28 +521,6 @@
 
   <div style="padding:40px 40px 80px; max-width:1240px; margin:0 auto">
     <div class="prizes-grid">
-      <div class="prize-col">
-        <div class="label">Battle of the Bands</div>
-        <div class="prize-col-title">Band Prizes</div>
-        <div class="prize-item p1">
-          <div class="prize-medal">1st</div>
-          <div>
-            <div class="prize-name">Champion Band</div>
-            <div class="prize-desc">Paid gig at Gallettes on a Friday or Saturday night</div>
-            
-          </div>
-        </div>
-        <div class="prize-item p2">
-          <div class="prize-medal">2nd</div>
-          <div><div class="prize-name">Runner-Up</div><div class="prize-desc">Prize TBD</div><div class="tbd-tag" style="margin-top:6px">TBD</div></div>
-        </div>
-        <div class="prize-item p3">
-          <div class="prize-medal">3rd</div>
-          <div><div class="prize-name">Third Place</div><div class="prize-desc">Prize TBD</div><div class="tbd-tag" style="margin-top:6px">TBD</div></div>
-        </div>
-        <div style="margin-top:24px; font-size:11px; color:var(--light); line-height:1.8">Attendees vote for their favorite band. The winning band is recognized during an awards ceremony at the conclusion of the event.</div>
-      </div>
-
       <div class="prize-col" style="background:var(--off)">
         <div class="label">Sponsorship Competition</div>
         <div class="prize-col-title">Sponsorship<br>Prizes</div>
@@ -551,7 +529,6 @@
           <div>
             <div class="prize-name">Top Fundraising Organization</div>
             <div class="prize-desc">Free date party at The Booth</div>
-            
           </div>
         </div>
         <div class="prize-item p2">
@@ -561,6 +538,22 @@
         <div class="prize-item p3">
           <div class="prize-medal">3rd</div>
           <div><div class="prize-name">Third-Highest Donor</div><div class="prize-desc">Recognition + prize TBD.</div><div class="tbd-tag" style="margin-top:6px">TBD</div></div>
+        </div>
+      </div>
+
+      <div class="prize-col">
+        <div class="label">Battle of the Bands</div>
+        <div class="prize-col-title">Band Prizes</div>
+
+        <div style="background:var(--crimson); color:var(--white); padding:28px 32px; margin-bottom:24px;">
+          <div style="font-size:11px; letter-spacing:0.2em; text-transform:uppercase; opacity:0.6; margin-bottom:8px;">1st Place</div>
+          <div style="font-family:'Oswald',sans-serif; font-size:26px; font-weight:700; margin-bottom:8px;">🎸 Paid Gig at Gallettes</div>
+          <div style="font-size:14px; opacity:0.85; line-height:1.7;">The winning band receives a paid performance on a Friday or Saturday night at Gallettes.</div>
+        </div>
+
+        <div style="padding:20px 0;">
+          <div style="font-size:11px; letter-spacing:0.15em; text-transform:uppercase; color:var(--light); margin-bottom:8px;">2nd & 3rd Place</div>
+          <div style="font-size:14px; color:var(--muted); line-height:1.7;">2nd and 3rd place will be featured on the UA Battle of the Bands Instagram page!</div>
         </div>
       </div>
     </div>
@@ -579,22 +572,20 @@
       <div class="donate-left">
         <div class="label">How to Donate</div>
         <div class="donate-title">Support<br>the Fund</div>
-        <p class="donate-body">All donations are processed securely through GiveButter, our official fundraising platform. Every dollar goes directly to the Joe Espy SGA Scholarship Fund at the University of Alabama.</p>
-        <p class="donate-body">After donating, your organization will appear on the live leaderboard. Select a sponsorship package to receive wristbands and additional recognition benefits.</p>
+        <p class="donate-body">Choose your sponsorship package, then donate that amount through our GiveButter page. Any additional contribution is always welcome. Every dollar goes directly to the Joe Espy SGA Scholarship Fund.</p>
         <a href="javascript:void(0)" class="btn btn-gold" onclick="return showPage('sponsors')">View Packages →</a>
       </div>
       <div class="donate-right">
-        <div style="width:100%; background:var(--white); border:2px dashed rgba(158,27,50,0.2); padding:48px 32px; text-align:center;">
-          <div style="font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:var(--light); margin-bottom:16px">Donation Portal</div>
-          <div style="font-family:'Oswald',sans-serif; font-size:32px; font-weight:700; color:var(--crimson); margin-bottom:12px;">GiveButter</div>
-          <p style="font-size:12px; color:var(--muted); line-height:1.8; margin-bottom:28px;">Our donation link will be live here shortly.</p>
-          <div style="background:var(--off); padding:20px 24px; text-align:left; margin-bottom:24px;">
-            <div style="font-size:11px; font-weight:600; color:var(--gray); margin-bottom:4px;">Lily Leitner</div>
-            <div style="font-size:11px; color:var(--muted); line-height:1.9;">VP for External Affairs, SGA<br>
+        <div style="width:100%; background:var(--white); border:2px solid rgba(158,27,50,0.15); padding:64px 32px; text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+          <div style="font-family:'Oswald',sans-serif; font-size:52px; font-weight:700; color:var(--crimson); line-height:1; margin-bottom:32px;">Donate<br>Here</div>
+          <a href="https://givebutter.com/2026-battle-of-the-bands-zwhogl" target="_blank" class="btn btn-crimson" style="display:block; text-align:center; font-size:14px; padding:16px 40px;">Donate on GiveButter →</a>
+        </div>
+          <div style="margin-top:20px; background:var(--off); padding:20px 24px; text-align:left;">
+            <div style="font-size:12px; font-weight:600; color:var(--gray); margin-bottom:4px;">Questions? Contact Lily Leitner</div>
+            <div style="font-size:12px; color:var(--muted); line-height:1.9;">VP for External Affairs, SGA<br>
             <a href="mailto:lhleitner@crimson.ua.edu" style="color:var(--crimson); text-decoration:none;">lhleitner@crimson.ua.edu</a><br>
             <a href="tel:2058862872" style="color:var(--crimson); text-decoration:none;">(205) 886-2872</a></div>
           </div>
-          <div style="font-size:10px; color:var(--light); letter-spacing:0.1em; text-transform:uppercase;">Coming Soon · Powered by GiveButter</div>
         </div>
       </div>
     </div>
