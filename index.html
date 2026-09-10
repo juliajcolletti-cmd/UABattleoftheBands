@@ -292,9 +292,9 @@
 
   <div class="raised-bar">
     <div class="raised-label">Total Raised · 2026</div>
-    <div class="raised-num">$0</div>
+    <div class="raised-num">$1,350</div>
     <div class="raised-goal">Goal: $25,000</div>
-    <div class="prog-outer"><div class="prog-fill" style="width:0%"></div></div>
+    <div class="prog-outer"><div class="prog-fill" style="width:5.4%"></div></div>
   </div>
 
   <!-- STATS -->
@@ -553,7 +553,7 @@
 
         <div style="padding:20px 0;">
           <div style="font-size:11px; letter-spacing:0.15em; text-transform:uppercase; color:var(--light); margin-bottom:8px;">2nd & 3rd Place</div>
-          <div style="font-size:14px; color:var(--muted); line-height:1.7;">2nd and 3rd place will be featured on the UA Battle of the Bands Instagram page!</div>
+          <div style="font-size:14px; color:var(--muted); line-height:1.7;">2nd and 3rd place bands will be featured on the UA Battle of the Bands Instagram page!</div>
         </div>
       </div>
     </div>
@@ -608,7 +608,10 @@
 </footer>
 
 <script>
-const sponsors = [];
+const sponsors = [
+  { name:"Pi Kappa Alpha",    type:"Fraternity", pkg:"Headliner",       bands:130, amount:1000 },
+  { name:"Kappa Alpha Theta", type:"Sorority",   pkg:"Featured Artist", bands:45,  amount:350  },
+];
 
 function showPage(id) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
