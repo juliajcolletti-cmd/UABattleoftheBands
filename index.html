@@ -295,9 +295,9 @@
 
   <div class="raised-bar">
     <div class="raised-label">Total Raised · 2026</div>
-    <div class="raised-num">$8,400</div>
+    <div class="raised-num">$12,100</div>
     <div class="raised-goal">Goal: $25,000</div>
-    <div class="prog-outer"><div class="prog-fill" style="width:33.6%"></div></div>
+    <div class="prog-outer"><div class="prog-fill" style="width:48.4%"></div></div>
   </div>
 
   <!-- STATS -->
@@ -613,19 +613,25 @@
 <script>
 const sponsors = [
   { name:"Pi Kappa Alpha",    type:"Fraternity", pkg:"Headliner",       bands:130, amount:1000 },
+  { name:"Zeta Tau Alpha",    type:"Sorority",   pkg:"Headliner",       bands:130, amount:1000 },
+  { name:"Sigma Pi",          type:"Fraternity", pkg:"Headliner",       bands:130, amount:1000 },
+  { name:"Phi Mu",            type:"Sorority",   pkg:"Headliner",       bands:130, amount:1000 },
+  { name:"Delta Zeta",        type:"Sorority",   pkg:"Headliner",       bands:130, amount:1000 },
+  { name:"Sigma Phi Epsilon", type:"Fraternity", pkg:"Headliner",       bands:130, amount:1000 },
+  { name:"Delta Tau Delta",   type:"Fraternity", pkg:"Producer",        bands:80,  amount:650  },
+  { name:"Kappa Kappa Gamma", type:"Sorority",   pkg:"Producer",        bands:80,  amount:650  },
+  { name:"Alpha Phi",         type:"Sorority",   pkg:"Producer",        bands:80,  amount:650  },
+  { name:"Beta Theta Pi",     type:"Fraternity", pkg:"Producer",        bands:80,  amount:650  },
   { name:"Kappa Alpha Theta", type:"Sorority",   pkg:"Featured Artist", bands:45,  amount:350  },
   { name:"Theta Xi",          type:"Fraternity", pkg:"Featured Artist", bands:45,  amount:350  },
   { name:"Alpha Chi Omega",   type:"Sorority",   pkg:"Featured Artist", bands:45,  amount:350  },
   { name:"Delta Gamma",       type:"Sorority",   pkg:"Featured Artist", bands:45,  amount:350  },
-  { name:"Zeta Tau Alpha",    type:"Sorority",   pkg:"Headliner",       bands:130, amount:1000 },
-  { name:"Delta Tau Delta",   type:"Fraternity", pkg:"Producer",        bands:80,  amount:650  },
-  { name:"Kappa Kappa Gamma", type:"Sorority",   pkg:"Producer",        bands:80,  amount:650  },
   { name:"Chi Omega",         type:"Sorority",   pkg:"Featured Artist", bands:45,  amount:350  },
   { name:"Phi Delta Theta",   type:"Fraternity", pkg:"Featured Artist", bands:45,  amount:350  },
   { name:"Lambda Chi Alpha",  type:"Fraternity", pkg:"Featured Artist", bands:45,  amount:350  },
-  { name:"Alpha Phi",         type:"Sorority",   pkg:"Producer",        bands:80,  amount:650  },
-  { name:"Sigma Pi",          type:"Fraternity", pkg:"Headliner",       bands:130, amount:1000 },
-  { name:"Phi Mu",            type:"Sorority",   pkg:"Headliner",       bands:130, amount:1000 },
+  { name:"Sigma Tau Gamma",   type:"Fraternity", pkg:"Featured Artist", bands:45,  amount:350  },
+  { name:"Theta Chi",         type:"Fraternity", pkg:"Featured Artist", bands:45,  amount:350  },
+  { name:"Kappa Sigma",       type:"Fraternity", pkg:"Featured Artist", bands:45,  amount:350  },
 ];
 
 function showPage(id) {
@@ -648,17 +654,15 @@ function renderLeaderboard(id) {
   }
   const maxAmt = Math.max(...sponsors.map(s => s.amount), 1);
   const sorted = [...sponsors].sort((a,b) => b.amount - a.amount);
-  // Compute true tied ranks
   const ranks = [];
-  for (let i = 0; i < sorted.length; i++) {
+  sorted.forEach((s, i) => {
     if (i === 0) ranks.push(1);
     else if (sorted[i].amount === sorted[i-1].amount) ranks.push(ranks[i-1]);
     else ranks.push(i + 1);
-  }
+  });
   sorted.forEach((s, i) => {
     const rank = ranks[i];
     const pct = Math.round((s.amount / maxAmt) * 100);
-    // Medal class based on true rank
     const rc = rank===1?'r1':rank===2?'r2':rank===3?'r3':'';
     const row = document.createElement('div');
     row.className = `board-row ${rc}`;
